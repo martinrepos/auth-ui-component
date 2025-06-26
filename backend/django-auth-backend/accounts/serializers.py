@@ -31,3 +31,9 @@ class LoginSerializer(serializers.Serializer): # Handles user login
             data['user'] = user
             return data
         raise serializers.ValidationError("Invalid credentials.")
+    
+
+class UserSerializer(serializers.ModelSerializer): # Serializes user data
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email']
