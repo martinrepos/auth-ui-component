@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import UserListView
 from django.http import JsonResponse
-from .views import RegisterView  
+from .views import RegisterView, PasswordResetRequestView, PasswordResetConfirmView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,5 +13,7 @@ urlpatterns = [
     path("", lambda request: JsonResponse({"message": "API root"})), 
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path('api/reset-password/', PasswordResetRequestView.as_view()),
+    path('reset-password/confirm/<uidb64>/<token>/', PasswordResetConfirmView.as_view()),
 
 ]

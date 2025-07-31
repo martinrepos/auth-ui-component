@@ -105,6 +105,11 @@ export default function AuthForm() {
           {isLogin ? 'Need an account? Register' : 'Have an account? Login'}
         </button>
       </form>
+      <p className="text-sm mt-2 text-right">
+        <a href="/reset-password" className="text-blue-500 hover:underline">
+          Forgot your password?
+        </a>
+      </p>
     </div>
   );
 }
