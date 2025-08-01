@@ -25,7 +25,7 @@ export default function ResetPasswordConfirm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 max-w-sm mx-auto">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
       <h2 className="text-xl font-semibold">Set a new password</h2>
       <input
         type="password"

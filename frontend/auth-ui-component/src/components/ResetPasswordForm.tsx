@@ -20,20 +20,22 @@ export default function ResetPasswordForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 max-w-sm mx-auto">
-      <h2 className="text-xl font-semibold">Forgot your password?</h2>
-      <input
-        type="email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        className="w-full border p-2"
-        placeholder="Enter your email"
-        required
-      />
-      <button type="submit" className="w-full bg-blue-600 text-white p-2">
-        Send Reset Link
-      </button>
-      {message && <p className="text-sm mt-2">{message}</p>}
-    </form>
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
+      <h2 className="text-2xl font-bold mb-4">Forgot your password?</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          className="w-full p-2 border rounded"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded">
+          Send Reset Link
+        </button>
+        {message && <p className="text-sm mt-2">{message}</p>}
+      </form>
+    </div>
   );
 }

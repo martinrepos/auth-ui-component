@@ -17,7 +17,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow text-center">
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
       {isLoggedIn ? (
         <h2 className="text-2xl font-bold text-green-600">You're logged in</h2>
       ) : (
